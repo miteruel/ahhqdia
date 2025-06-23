@@ -1,0 +1,113 @@
+# requirements.txt
+# Archivo de dependencias para el proyecto de cámara Arduino + Python
+
+# Interfaz web
+gradio>=4.0.0
+
+# Procesamiento de imágenes
+opencv-python>=4.8.0
+Pillow>=10.0.0
+numpy>=1.24.0
+
+# Comunicación HTTP
+requests>=2.31.0
+
+# Utilidades adicionales
+datetime
+
+# ============================================
+# GUÍA DE INSTALACIÓN Y CONFIGURACIÓN
+# ============================================
+
+# 1. INSTALACIÓN DE DEPENDENCIAS PYTHON
+# Ejecutar en terminal:
+# pip install -r requirements.txt
+
+# 2. HARDWARE NECESARIO
+# - ESP32-CAM (recomendado) o Arduino con módulo de cámara OV7670
+# - Cable USB para programación
+# - Adaptador FTDI (si es necesario para ESP32-CAM)
+# - Fuente de alimentación 5V (para ESP32-CAM)
+
+# 3. CONFIGURACIÓN DEL ARDUINO
+# - Instalar ESP32 Board Package en Arduino IDE
+# - Seleccionar placa: "AI Thinker ESP32-CAM"
+# - Configurar las credenciales WiFi en el código
+# - Subir el código al ESP32-CAM
+# - Anotar la IP que aparece en el monitor serial
+
+# 4. CONFIGURACIÓN DE RED
+# - Asegurar que el ESP32-CAM y la PC estén en la misma red WiFi
+# - Verificar que no haya firewall bloqueando el puerto 80
+# - Probar acceso desde navegador: http://IP_ESP32/capture
+
+# 5. EJECUCIÓN DEL PROGRAMA PYTHON
+# python camera_interface.py
+
+# 6. ACCESO A LA INTERFAZ
+# - Abre tu navegador en: http://localhost:7860
+# - O desde otra PC en la red: http://IP_TU_PC:7860
+
+# ============================================
+# ESTRUCTURA DE ARCHIVOS DEL PROYECTO
+# ============================================
+
+# proyecto_camara_arduino/
+# ├── arduino_camera_esp32cam.ino    # Código para ESP32-CAM
+# ├── camera_interface.py            # Interfaz Python con Gradio
+# ├── requirements.txt               # Este archivo
+# ├── captured_images/               # Directorio para imágenes (se crea automáticamente)
+# └── README.md                      # Documentación del proyecto
+
+# ============================================
+# CONFIGURACIONES ADICIONALES
+# ============================================
+
+# Para desarrollo:
+# pip install gradio[dev]
+
+# Para crear ejecutable (opcional):
+# pip install pyinstaller
+# pyinstaller --onefile camera_interface.py
+
+# Para usar en producción:
+# pip install gunicorn (para despliegue web)
+
+# ============================================
+# SOLUCIÓN DE PROBLEMAS COMUNES
+# ============================================
+
+# Error: "Module not found"
+# Solución: pip install --upgrade pip && pip install -r requirements.txt
+
+# Error: "Connection refused"
+# Solución: Verificar IP del ESP32-CAM y conexión WiFi
+
+# Error: "Camera initialization failed"
+# Solución: Verificar conexiones de hardware y voltaje de alimentación
+
+# Error: "Permission denied" (Linux/Mac)
+# Solución: sudo pip install -r requirements.txt
+
+# Para actualizar todas las dependencias:
+# pip install --upgrade -r requirements.txt
+
+# ============================================
+# NOTAS DE RENDIMIENTO
+# ============================================
+
+# - Resolución recomendada: 800x600 para mejor rendimiento
+# - Usar WiFi 2.4GHz para mayor compatibilidad con ESP32
+# - Considerar usar un router dedicado para reducir latencia
+# - Para múltiples cámaras, usar IPs diferentes
+
+# ============================================
+# EXTENSIONES POSIBLES
+# ============================================
+
+# - Detección de objetos con YOLO
+# - Reconocimiento facial
+# - Stream de video en tiempo real
+# - Base de datos para almacenar imágenes
+# - API REST para integración con otros sistemas
+# - Notificaciones push cuando se detecta movimiento
