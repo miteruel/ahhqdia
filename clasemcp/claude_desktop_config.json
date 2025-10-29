@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "MoCoPoFast1": {
+      "command": "python",
+      "args": [        
+        "E:/miteruel/mcp/MoCoPoFast1.py"
+      ],
+      "env": {}
+    },
+    "markitdown":{
+      "command": "python",
+      "args": [        
+        
+        "E:/miteruel/mcp/MoCoPoConversor.py"
+      ],
+      "env": {}
+    }
+   
+  }
+}
