@@ -11,6 +11,9 @@ https://github.com/miteruel/ahhqdia/blob/main/clasemcp/OllamaMoCoPo.ipynb
 * Veremos un ejemplo de conexion entre un mcp hecho por nosotros y  Claude Desktop
 https://github.com/miteruel/ahhqdia/blob/main/clasemcp/MoCoPoFast1.py
 
+Ejemplo de configuracion de claude:
+https://github.com/miteruel/ahhqdia/blob/main/clasemcp/claude_desktop_config.json
+
 
 * Podemos ver algun ejemplo de terceras partes
 https://github.com/miteruel/ahhqdia/blob/main/clasemcp/MoCoPoConversor.py
