@@ -20,10 +20,11 @@ https://github.com/miteruel/ahhqdia/blob/main/clasemcp/MoCoPoConversor.py
 
 
 * FabuloZoo
-Los proximos pasos pueden ser integrar MCP con FabuloZoo,
 
-https://github.com/GongRzhe/YOLO-MCP-Server
-https://yolomcp.com/
+Los proximos pasos pueden ser integrar MCP con FabuloZoo.
 
-O integrar mcp en los dispositivos arduino del proyecto
-https://github.com/amahpour/arduino-mcp-server
+* https://github.com/GongRzhe/YOLO-MCP-Server
+* https://yolomcp.com/
+
+* O integrar mcp en los dispositivos arduino del proyecto
+* https://github.com/amahpour/arduino-mcp-server
